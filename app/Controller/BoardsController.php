@@ -4,7 +4,10 @@ class BoardsController extends AppController {
 
 	public $name = 'Boards';
 	public $uses = array('Board', 'Personal');
-	public $components = array('Auth');
+	public $components = array(
+		'Auth' => array(
+			'authError' => 'ログインしてください。')
+	);
 
 	public function index()
 	{
